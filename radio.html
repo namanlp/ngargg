@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Radio tools</title>
+    <meta name="description" content="List of all radio tools available on BlackArch">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<!-- Custom CSS -->
+    <link href="css/blackarch.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a href="index.html">
+					<img class=top-logo src="/images/logo/ba-logo.png" alt="BlackArch Linux Logo" />
+					<img class=top-fond src="/images/logo/ba-font.png" alt="BlackArch Linux Font" />
+				</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse menu-lnk" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right fa-ul" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
+                    <li id=home itemprop="name">
+                        <a itemprop="url" href="index.html" class="fa-li fas fa-home"> Home</a>
+                    </li>
+                    <li id=downloads itemprop="name">
+                        <a itemprop="url" href="downloads.html" class="fa-li fas fa-download"> Downloads</a>
+                    </li>
+                    <li id=guide itemprop="name">
+                        <a itemprop="url" href="guide.html" class="fa-li fas fa-book"> Guide</a>
+                    </li>
+                    <li id=faq itemprop="name">
+                        <a itemprop="url" href="faq.html" class="fa-li fas fa-question-circle"> Faq</a>
+                    </li>
+                    <li id=tools itemprop="name">
+                        <a itemprop="url" href="tools.html" class="fa-li fas fa-list-alt"> Tools</a>
+                    </li>
+                    <li id=community itemprop="name">
+                        <a itemprop="url" href="community.html" class="fa-li fas fa-users"> Community</a>
+                    </li>
+                    <li id=blog itemprop="name">
+                        <a itemprop="url" href="blog.html" class="fa-li fas fa-newspaper"> Blog</a>
+                    </li>
+                    <li id=donate itemprop="name">
+     					<a itemprop="url" href="donate.html" class="fa-li fas fa-heart"> Donate</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('/images/slider/ba-slider.png');"></div>
+                <div class="carousel-caption">
+                    <h2>BlackArch Linux <br />Penetration Testing Distribution</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('/images/slider/ba-slider2.png');"></div>
+                <div class="carousel-caption">
+                    <h2>Over 2600 tools</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container result">
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header page-header-title">
+	            <h1>Radio</h1> <h2>The list</h2>
+                </div>
+                <ol class="breadcrumb">
+                    <li><a class=home href="index.html">Home</a>
+                    </li>
+                    <li class="active"><a class=tools href="tools.html">tools</a></li>
+                     <li class="active">radio</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <p>
+Packages that operates on radio frequency.</p>
+                <br />
+                <p>
+                    <b>Tool count:</b> <a href="">13</a>
+                    <input type="text" id="searchTools" onkeyup="searchTools()" placeholder="Input tool name" title="Type in a name">
+                </p>
+                <div class="panel panel-default text-left">
+                    <div class="panel-heading">
+                        <b>BlackArch radio</b>
+                    </div>
+                    <table id="tbl-minimalist" itemscope itemtype="https://www.schema.org/Thing">
+                        <thead>
+                            <tr>
+                                <th class=tbl-name itemprop="item">Name</th>
+                                <th class=tbl-version>Version</th>
+                                <th class=tbl-description>Description</th>
+                                <th class=tbl-homepage>Homepage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gpredict</td>
+                                <td class="tbl-version vcat">1617.aa57710</td>
+                                <td class="tbl-description dcat" itemprop="description">A real-time satellite tracking and orbit prediction application.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://gpredict.oz9aec.net/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gps-sdr-sim</td>
+                                <td class="tbl-version vcat">183.bf998ab</td>
+                                <td class="tbl-description dcat" itemprop="description">Software-Defined GPS Signal Simulator.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/osqzss/gps-sdr-sim" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gr-air-modes</td>
+                                <td class="tbl-version vcat">396.0b6c383</td>
+                                <td class="tbl-description dcat" itemprop="description">Gnuradio tools for receiving Mode S transponder signals, including ADS-B.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/bistromath/gr-air-modes" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gr-gsm</td>
+                                <td class="tbl-version vcat">1151.2efaa49</td>
+                                <td class="tbl-description dcat" itemprop="description">Gnuradio blocks and tools for receiving GSM transmissions.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/ptrkrysik/gr-gsm" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gr-paint</td>
+                                <td class="tbl-version vcat">34.0aad1fc</td>
+                                <td class="tbl-description dcat" itemprop="description">An OFDM Spectrum Painter for GNU Radio.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/drmpeg/gr-paint" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">hackrf</td>
+                                <td class="tbl-version vcat">2018.01.1</td>
+                                <td class="tbl-description dcat" itemprop="description">Driver for HackRF, allowing general purpose software defined radio (SDR).</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/mossmann/hackrf" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">libosmocore</td>
+                                <td class="tbl-version vcat">3247.3a6bedf1</td>
+                                <td class="tbl-description dcat" itemprop="description">Collection of common code used in various sub-projects inside the Osmocom family of projects.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://osmocom.org/projects/libosmocore/wiki/Libosmocore" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">multimon-ng</td>
+                                <td class="tbl-version vcat">1.1.9</td>
+                                <td class="tbl-description dcat" itemprop="description">An sdr decoder, supports pocsag, ufsk, clipfsk, afsk, hapn, fsk, dtmf, zvei.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/EliasOenal/multimon-ng" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">proxmark</td>
+                                <td class="tbl-version vcat">2413.61163344</td>
+                                <td class="tbl-description dcat" itemprop="description">A powerful general purpose RFID tool, the size of a deck of cards, designed to snoop, listen and emulate everything from Low Frequency (125kHz) to High Frequency (13.56MHz) tags.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/Proxmark/proxmark3" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">rtlamr</td>
+                                <td class="tbl-version vcat">197.03369d1</td>
+                                <td class="tbl-description dcat" itemprop="description">An rtl-sdr receiver for smart meters operating in the 900MHz ISM band.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/bemasher/rtlamr/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">simtrace2</td>
+                                <td class="tbl-version vcat">907.a124c17</td>
+                                <td class="tbl-description dcat" itemprop="description">Host utilities to communicate with SIMtrace2 USB Devices.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://osmocom.org/projects/simtrace2/wiki" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">urh</td>
+                                <td class="tbl-version vcat">2.9.1</td>
+                                <td class="tbl-description dcat" itemprop="description">Universal Radio Hacker: investigate wireless protocols like a boss</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/jopohl/urh" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">yate-bts</td>
+                                <td class="tbl-version vcat">6.1.0</td>
+                                <td class="tbl-description dcat" itemprop="description">An open source GSM Base Station software.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://yatebts.com/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Footer -->
+      	<footer>
+           <div class="row">
+				<div id=socialfoot class="col-lg-12" itemscope itemtype="https://schema.org/Organization">
+			 	    <link itemprop="url" href="https://blackarch.org">
+			        <a itemprop="sameAs" href="https://github.com/BlackArch" title="Github" target=_blank><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
+			        <a itemprop="sameAs" href="https://twitter.com/blackarchlinux" title="Twitter" target=_blank><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+					<a itemprop="sameAs" href="irc://irc.freenode.net/blackarch" title="Irc" target=_blank><i class="fas fa-comments fa-2x" aria-hidden="true"></i></a>
+					<a itemprop="sameAs" href="https://discord.gg/DtEfRtx" title="Discord" target="_blank"><i class="fab fa-discord fa-2x" aria-hidden="true"></i></a>
+					<a itemprop="sameAs" href="https://blackarch.org/blog.html" title="Blog" target=_blank><i class="fas fa-newspaper fa-2x" aria-hidden="true"></i></a>
+					<a itemprop="sameAs" href="https://blackarch.org/rss.xml" title="Rss" target=_blank><i class="fas fa-rss fa-2x" aria-hidden="true"></i></a>
+					<br><span itemprop="legalName">BlackArch Linux</span> <span>2013-2021</span>
+	            </div>
+            </div>
+	    <!-- End Footer -->
+        </footer>
+        </div>
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/blackarch.js"></script>
+</body>
+</html>

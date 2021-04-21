@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Recon tools</title>
+    <meta name="description" content="List of all recon tools available on BlackArch">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!-- Custom CSS -->
+    <link href="css/blackarch.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a href="index.html">
+					<img class=top-logo src="/images/logo/ba-logo.png" alt="BlackArch Linux Logo" />
+					<img class=top-fond src="/images/logo/ba-font.png" alt="BlackArch Linux Font" />
+				</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse menu-lnk" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right fa-ul" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
+                    <li id=home itemprop="name">
+                        <a itemprop="url" href="index.html" class="fa-li fas fa-home"> Home</a>
+                    </li>
+                    <li id=downloads itemprop="name">
+                        <a itemprop="url" href="downloads.html" class="fa-li fas fa-download"> Downloads</a>
+                    </li>
+                    <li id=guide itemprop="name">
+                        <a itemprop="url" href="guide.html" class="fa-li fas fa-book"> Guide</a>
+                    </li>
+                    <li id=faq itemprop="name">
+                        <a itemprop="url" href="faq.html" class="fa-li fas fa-question-circle"> Faq</a>
+                    </li>
+                    <li id=tools itemprop="name">
+                        <a itemprop="url" href="tools.html" class="fa-li fas fa-list-alt"> Tools</a>
+                    </li>
+                    <li id=community itemprop="name">
+                        <a itemprop="url" href="community.html" class="fa-li fas fa-users"> Community</a>
+                    </li>
+                    <li id=blog itemprop="name">
+                        <a itemprop="url" href="blog.html" class="fa-li fas fa-newspaper"> Blog</a>
+                    </li>
+                    <li id=donate itemprop="name">
+     					<a itemprop="url" href="donate.html" class="fa-li fas fa-heart"> Donate</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('/images/slider/ba-slider.png');"></div>
+                <div class="carousel-caption">
+                    <h2>BlackArch Linux <br />Penetration Testing Distribution</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('/images/slider/ba-slider2.png');"></div>
+                <div class="carousel-caption">
+                    <h2>Over 2600 tools</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container result">
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header page-header-title">
+	            <h1>Recon</h1> <h2>The list</h2>
+                </div>
+                <ol class="breadcrumb">
+                    <li><a class=home href="index.html">Home</a>
+                    </li>
+                    <li class="active"><a class=tools href="tools.html">tools</a></li>
+                     <li class="active">recon</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <p>
+Packages that actively seeks vulnerable exploits in the wild. More of an umbrella group for similar
+packages.</p>
+                <br />
+                <p>
+                    <b>Tool count:</b> <a href="">33</a>
+                    <input type="text" id="searchTools" onkeyup="searchTools()" placeholder="Input tool name" title="Type in a name">
+                </p>
+                <div class="panel panel-default text-left">
+                    <div class="panel-heading">
+                        <b>BlackArch recon</b>
+                    </div>
+                    <table id="tbl-minimalist" itemscope itemtype="https://www.schema.org/Thing">
+                        <thead>
+                            <tr>
+                                <th class=tbl-name itemprop="item">Name</th>
+                                <th class=tbl-version>Version</th>
+                                <th class=tbl-description>Description</th>
+                                <th class=tbl-homepage>Homepage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class=tbl-name itemprop="name">activedirectoryenum</td>
+                                <td class="tbl-version vcat">0.5.0</td>
+                                <td class="tbl-description dcat" itemprop="description">Enumerate AD through LDAP.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/CasperGN/ActiveDirectoryEnumeration" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ad-ldap-enum</td>
+                                <td class="tbl-version vcat">44.1386673</td>
+                                <td class="tbl-description dcat" itemprop="description">An LDAP based Active Directory user and group enumeration tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/CroweCybersecurity/ad-ldap-enum" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">aiodnsbrute</td>
+                                <td class="tbl-version vcat">38.e773a4c</td>
+                                <td class="tbl-description dcat" itemprop="description">Python 3 DNS asynchronous brute force utility.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/blark/aiodnsbrute" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">altdns</td>
+                                <td class="tbl-version vcat">68.689cc81</td>
+                                <td class="tbl-description dcat" itemprop="description">Generates permutations, alterations and mutations of subdomains and then resolves them.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/infosec-au/altdns" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">aquatone</td>
+                                <td class="tbl-version vcat">120.854a5d5</td>
+                                <td class="tbl-description dcat" itemprop="description">A Tool for Domain Flyovers.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/michenriksen/aquatone" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">attacksurfacemapper</td>
+                                <td class="tbl-version vcat">41.3793ec4</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool that aims to automate the reconnaissance process.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/superhedgy/AttackSurfaceMapper" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">autosint</td>
+                                <td class="tbl-version vcat">234.e1f4937</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool to automate common osint tasks.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/bharshbarger/AutOSINT" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">aws-inventory</td>
+                                <td class="tbl-version vcat">19.9a2fa8e</td>
+                                <td class="tbl-description dcat" itemprop="description">Discover resources created in an AWS account.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/nccgroup/aws-inventory" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">aztarna</td>
+                                <td class="tbl-version vcat">1.2.1</td>
+                                <td class="tbl-description dcat" itemprop="description">A footprinting tool for ROS and SROS systems.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/aliasrobotics/aztarna" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">badkarma</td>
+                                <td class="tbl-version vcat">85.2c46334</td>
+                                <td class="tbl-description dcat" itemprop="description">Advanced network reconnaissance toolkit.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/r3vn/badKarma" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">basedomainname</td>
+                                <td class="tbl-version vcat">0.1</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool that can extract TLD (Top Level Domain), domain extensions (Second Level Domain + TLD), domain name, and hostname from fully qualified domain names.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.morningstarsecurity.com/research" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">bfac</td>
+                                <td class="tbl-version vcat">52.18dabcc</td>
+                                <td class="tbl-description dcat" itemprop="description">An automated tool that checks for backup artifacts that may disclose the web-application's source code.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/mazen160/bfac" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">billcipher</td>
+                                <td class="tbl-version vcat">32.97fba59</td>
+                                <td class="tbl-description dcat" itemprop="description">Information Gathering tool for a Website or IP address.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/GitHackTools/BillCipher" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">bing-ip2hosts</td>
+                                <td class="tbl-version vcat">1.0.3</td>
+                                <td class="tbl-description dcat" itemprop="description">Enumerates all hostnames which Bing has indexed for a specific IP address.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.morningstarsecurity.com/research/bing-ip2hosts" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">bloodhound</td>
+                                <td class="tbl-version vcat">1195.0da9efe</td>
+                                <td class="tbl-description dcat" itemprop="description">Six Degrees of Domain Admin</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/BloodHoundAD/BloodHound" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">bloodhound-python</td>
+                                <td class="tbl-version vcat">v1.0.1.r34.g645082e</td>
+                                <td class="tbl-description dcat" itemprop="description">Bloodhound python data collector</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/fox-it/BloodHound.py" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">catnthecanary</td>
+                                <td class="tbl-version vcat">7.e9184fe</td>
+                                <td class="tbl-description dcat" itemprop="description">An application to query the canary.pw data set for leaked data.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/packetassailant/catnthecanary" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ccrawldns</td>
+                                <td class="tbl-version vcat">4.0bebd49</td>
+                                <td class="tbl-description dcat" itemprop="description">Retrieves from the CommonCrawl data set unique subdomains for a given domain name.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/lgandx/CCrawlDNS" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">certgraph</td>
+                                <td class="tbl-version vcat">157.41f78b5</td>
+                                <td class="tbl-description dcat" itemprop="description">Crawl the graph of certificate Alternate Names.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/lanrat/certgraph" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">chaos-client</td>
+                                <td class="tbl-version vcat">83.623cb47</td>
+                                <td class="tbl-description dcat" itemprop="description">Go client to communicate with Chaos dataset API.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/projectdiscovery/chaos-client" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">citadel</td>
+                                <td class="tbl-version vcat">95.3b1adbc</td>
+                                <td class="tbl-description dcat" itemprop="description">A library of OSINT tools.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/jakecreps/Citadel" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">cloud-buster</td>
+                                <td class="tbl-version vcat">194.b55e4a1</td>
+                                <td class="tbl-description dcat" itemprop="description">A tool that checks Cloudflare enabled sites for origin IP leaks.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/SageHack/cloud-buster" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">cloudfail</td>
+                                <td class="tbl-version vcat">77.fcd9016</td>
+                                <td class="tbl-description dcat" itemprop="description">Utilize misconfigured DNS and old database records to find hidden IP's behind the CloudFlare network.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/m0rtem/CloudFail" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">cloudlist</td>
+                                <td class="tbl-version vcat">13.680250c</td>
+                                <td class="tbl-description dcat" itemprop="description">A tool for listing Assets from multiple Cloud Providers.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/projectdiscovery/cloudlist" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">cloudmare</td>
+                                <td class="tbl-version vcat">67.032751f</td>
+                                <td class="tbl-description dcat" itemprop="description">A simple tool to find origin servers of websites protected by CloudFlare with a misconfiguration DNS.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/MrH0wl/Cloudmare" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">cloudunflare</td>
+                                <td class="tbl-version vcat">14.b91a8a7</td>
+                                <td class="tbl-description dcat" itemprop="description">Reconnaissance Real IP address for Cloudflare Bypass.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/greycatz/CloudUnflare" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">cr3dov3r</td>
+                                <td class="tbl-version vcat">46.99a1660</td>
+                                <td class="tbl-description dcat" itemprop="description">Search for public leaks for email addresses + check creds against 16 websites.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/D4Vinci/Cr3dOv3r" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">cutycapt</td>
+                                <td class="tbl-version vcat">10</td>
+                                <td class="tbl-description dcat" itemprop="description">A Qt and WebKit based command-line utility that captures WebKit's rendering of a web page.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://cutycapt.sourceforge.net/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">datasploit</td>
+                                <td class="tbl-version vcat">367.a270d50</td>
+                                <td class="tbl-description dcat" itemprop="description">Performs automated OSINT and more.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/upgoingstar/datasploit" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dga-detection</td>
+                                <td class="tbl-version vcat">78.0a3186e</td>
+                                <td class="tbl-description dcat" itemprop="description">DGA Domain Detection using Bigram Frequency Analysis.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/philarkwright/DGA-Detection" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dns-parallel-prober</td>
+                                <td class="tbl-version vcat">56.99a7b83</td>
+                                <td class="tbl-description dcat" itemprop="description">PoC for an adaptive parallelised DNS prober.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/lorenzog/dns-parallel-prober" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnsbrute</td>
+                                <td class="tbl-version vcat">2.b1dc84a</td>
+                                <td class="tbl-description dcat" itemprop="description">Multi-theaded DNS bruteforcing, average speed 80 lookups/second with 40 threads.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/d4rkcat/dnsbrute" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnscobra</td>
+                                <td class="tbl-version vcat">1.0</td>
+                                <td class="tbl-description dcat" itemprop="description">DNS subdomain bruteforcing tool with Tor support through torsocks</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/dmitescu/dnscobra" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnsenum</td>
+                                <td class="tbl-version vcat">1.2.4.2</td>
+                                <td class="tbl-description dcat" itemprop="description">Script that enumerates DNS information from a domain, attempts zone transfers, performs a brute force dictionary style attack, and then performs reverse look-ups on the results.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www2.packetstormsecurity.org/cgi-bin/search/search.cgi?searchvalue=dnsenum" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnsgrep</td>
+                                <td class="tbl-version vcat">14.3f4fa7c</td>
+                                <td class="tbl-description dcat" itemprop="description">A utility for quickly searching presorted DNS names.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/erbbysam/DNSGrep" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnsprobe</td>
+                                <td class="tbl-version vcat">56.7120008</td>
+                                <td class="tbl-description dcat" itemprop="description">Allows you to perform multiple dns queries of your choice with a list of user supplied resolvers.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/projectdiscovery/dnsprobe" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnsrecon</td>
+                                <td class="tbl-version vcat">0.10.1</td>
+                                <td class="tbl-description dcat" itemprop="description">Python script for enumeration of hosts, subdomains and emails from a given domain using google.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/darkoperator/dnsrecon" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnssearch</td>
+                                <td class="tbl-version vcat">20.e4ea439</td>
+                                <td class="tbl-description dcat" itemprop="description">A subdomain enumeration tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/evilsocket/dnssearch" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnsspider</td>
+                                <td class="tbl-version vcat">1.3</td>
+                                <td class="tbl-description dcat" itemprop="description">A fast multithreaded bruteforcer of subdomains that leverages a wordlist and/or character permutation.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://nullsecurity.net/tools/scanner.html" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnstracer</td>
+                                <td class="tbl-version vcat">1.10</td>
+                                <td class="tbl-description dcat" itemprop="description">Determines where a given DNS server gets its information from, and follows the chain of DNS servers</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://www.mavetju.org/unix/dnstracer.php" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnswalk</td>
+                                <td class="tbl-version vcat">2.0.2</td>
+                                <td class="tbl-description dcat" itemprop="description">A DNS debugger and zone-transfer utility.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://sourceforge.net/projects/dnswalk/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dnsx</td>
+                                <td class="tbl-version vcat">112.6688056</td>
+                                <td class="tbl-description dcat" itemprop="description">Fast and multi-purpose DNS toolkit allow to run multiple DNS queries of your choice with a list of user-supplied resolvers.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/projectdiscovery/dnsx" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">domain-analyzer</td>
+                                <td class="tbl-version vcat">0.8.1</td>
+                                <td class="tbl-description dcat" itemprop="description">Finds all the security information for a given domain name.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://sourceforge.net/projects/domainanalyzer/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">domain-stats</td>
+                                <td class="tbl-version vcat">160.2119e16</td>
+                                <td class="tbl-description dcat" itemprop="description">A web API to deliver domain information from whois and alexa.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/MarkBaggett/domain_stats" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">domainhunter</td>
+                                <td class="tbl-version vcat">38.c185116</td>
+                                <td class="tbl-description dcat" itemprop="description">Checks expired domains for categorization/reputation and Archive.org history to determine good candidates for phishing and C2 domain names.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/threatexpress/domainhunter" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">dradis-ce</td>
+                                <td class="tbl-version vcat">4052.b4f5f057</td>
+                                <td class="tbl-description dcat" itemprop="description">An open source framework to enable effective information sharing.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://dradisframework.org/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">enum4linux</td>
+                                <td class="tbl-version vcat">0.8.9</td>
+                                <td class="tbl-description dcat" itemprop="description">A tool for enumerating information from Windows and Samba systems.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://labs.portcullis.co.uk/application/enum4linux/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">enum4linux-ng</td>
+                                <td class="tbl-version vcat">264.d37b7ef</td>
+                                <td class="tbl-description dcat" itemprop="description">A next generation version of enum4linux.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/cddmp/enum4linux-ng" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">enumerate-iam</td>
+                                <td class="tbl-version vcat">14.4529114</td>
+                                <td class="tbl-description dcat" itemprop="description">Enumerate the permissions associated with an AWS credential set.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/andresriancho/enumerate-iam" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">enumerid</td>
+                                <td class="tbl-version vcat">27.c106f05</td>
+                                <td class="tbl-description dcat" itemprop="description">Enumerate RIDs using pure Python.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/Gilks/enumerid" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">exitmap</td>
+                                <td class="tbl-version vcat">369.172e763</td>
+                                <td class="tbl-description dcat" itemprop="description">A fast and modular scanner for Tor exit relays.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/NullHypothesis/exitmap" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">facebot</td>
+                                <td class="tbl-version vcat">23.57f6025</td>
+                                <td class="tbl-description dcat" itemprop="description">A facebook profile and reconnaissance system.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/pun1sh3r/facebot" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">favfreak</td>
+                                <td class="tbl-version vcat">25.b85ebde</td>
+                                <td class="tbl-description dcat" itemprop="description">Weaponizing favicon.ico for BugBounties , OSINT and what not.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/devanshbatham/FavFreak" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">fbid</td>
+                                <td class="tbl-version vcat">16.1b35eb9</td>
+                                <td class="tbl-description dcat" itemprop="description">Show info about the author by facebook photo url.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/guelfoweb/fbid" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">fierce</td>
+                                <td class="tbl-version vcat">126.2ef6794</td>
+                                <td class="tbl-description dcat" itemprop="description">A DNS reconnaissance tool for locating non-contiguous IP space.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/mschwager/fierce" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">finalrecon</td>
+                                <td class="tbl-version vcat">58.55e7c60</td>
+                                <td class="tbl-description dcat" itemprop="description">OSINT Tool for All-In-One Web Reconnaissance.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/thewhiteh4t/FinalRecon" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">findomain</td>
+                                <td class="tbl-version vcat">4.0.1</td>
+                                <td class="tbl-description dcat" itemprop="description">The fastest and cross-platform subdomain enumerator, do not waste your time</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/Edu4rdSHL/findomain" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">flashlight</td>
+                                <td class="tbl-version vcat">109.90d1dc5</td>
+                                <td class="tbl-description dcat" itemprop="description">Automated Information Gathering Tool for Penetration Testers.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/galkan/flashlight" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">forager</td>
+                                <td class="tbl-version vcat">115.7439b0a</td>
+                                <td class="tbl-description dcat" itemprop="description">Multithreaded threat Intelligence gathering utilizing.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/byt3smith/Forager" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gasmask</td>
+                                <td class="tbl-version vcat">170.e0d0f0a</td>
+                                <td class="tbl-description dcat" itemprop="description">All in one Information gathering tool - OSINT.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/twelvesec/gasmask" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gatecrasher</td>
+                                <td class="tbl-version vcat">2.3ad5225</td>
+                                <td class="tbl-description dcat" itemprop="description">Network auditing and analysis tool developed in Python.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/michaeltelford/gatecrasher" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">geoedge</td>
+                                <td class="tbl-version vcat">0.2</td>
+                                <td class="tbl-description dcat" itemprop="description">This little tools is designed to get geolocalization information of a host, it get the information from two sources (maxmind and geoiptool).</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">git-hound</td>
+                                <td class="tbl-version vcat">116.f1528c0</td>
+                                <td class="tbl-description dcat" itemprop="description">Pinpoints exposed API keys on GitHub. A batch-catching, pattern-matching, patch-attacking secret snatcher.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/tillson/git-hound" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gitdorker</td>
+                                <td class="tbl-version vcat">110.5ae65ab</td>
+                                <td class="tbl-description dcat" itemprop="description">Python program to scrape secrets from GitHub through usage of a large repository of dorks.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/obheda12/GitDorker" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gitem</td>
+                                <td class="tbl-version vcat">104.d40a1c9</td>
+                                <td class="tbl-description dcat" itemprop="description">A Github organization reconnaissance tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/mschwager/gitem" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gitgraber</td>
+                                <td class="tbl-version vcat">67.72e5850</td>
+                                <td class="tbl-description dcat" itemprop="description">Monitor GitHub to search and find sensitive data in real time for different online services.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/hisxo/gitGraber" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">githack</td>
+                                <td class="tbl-version vcat">10.1fed62c</td>
+                                <td class="tbl-description dcat" itemprop="description">A `.git` folder disclosure exploit.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/lijiejie/githack" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">github-dorks</td>
+                                <td class="tbl-version vcat">63.38ee335</td>
+                                <td class="tbl-description dcat" itemprop="description">Collection of github dorks and helper tool to automate the process of checking dorks.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/techgaun/github-dorks" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gitleaks</td>
+                                <td class="tbl-version vcat">634.6f5ad9d</td>
+                                <td class="tbl-description dcat" itemprop="description">Audit Git repos for secrets and keys.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/zricethezav/gitleaks" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gitmails</td>
+                                <td class="tbl-version vcat">71.8aa8411</td>
+                                <td class="tbl-description dcat" itemprop="description">An information gathering tool to collect git commit emails in version control host services.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/giovanifss/gitmails" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gitminer</td>
+                                <td class="tbl-version vcat">54.16ada58</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool for advanced mining for content on Github.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/danilovazb/GitMiner" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gitrecon</td>
+                                <td class="tbl-version vcat">30.6467e78</td>
+                                <td class="tbl-description dcat" itemprop="description">OSINT tool to get information from a Github and Gitlab profile and find user's email addresses leaked on commits.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/GONZOsint/gitrecon" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">goddi</td>
+                                <td class="tbl-version vcat">1.2</td>
+                                <td class="tbl-description dcat" itemprop="description">Dumps Active Directory domain information.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/NetSPI/goddi" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">goodork</td>
+                                <td class="tbl-version vcat">2.2</td>
+                                <td class="tbl-description dcat" itemprop="description">A python script designed to allow you to leverage the power of google dorking straight from the comfort of your command line.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://goo-dork.blogspot.com/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">goofile</td>
+                                <td class="tbl-version vcat">1.5</td>
+                                <td class="tbl-description dcat" itemprop="description">Command line filetype search</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://code.google.com/p/goofile/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">goog-mail</td>
+                                <td class="tbl-version vcat">1.0</td>
+                                <td class="tbl-description dcat" itemprop="description">Enumerate domain emails from google.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.darkc0de.com/others/goog-mail.py" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">googlesub</td>
+                                <td class="tbl-version vcat">14.a7a3cc7</td>
+                                <td class="tbl-description dcat" itemprop="description">A python script to find domains by using google dorks.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/zombiesam/googlesub" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">goohak</td>
+                                <td class="tbl-version vcat">30.576ca53</td>
+                                <td class="tbl-description dcat" itemprop="description">Automatically Launch Google Hacking Queries Against A Target Domain.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/1N3/Goohak" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">goop</td>
+                                <td class="tbl-version vcat">12.39b34eb</td>
+                                <td class="tbl-description dcat" itemprop="description">Perform google searches without being blocked by the CAPTCHA or hitting any rate limits.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/s0md3v/goop" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gosint</td>
+                                <td class="tbl-version vcat">196.9c86ed2</td>
+                                <td class="tbl-description dcat" itemprop="description">OSINT framework in Go.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/Nhoya/gOSINT" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">grabing</td>
+                                <td class="tbl-version vcat">11.9c1aa6c</td>
+                                <td class="tbl-description dcat" itemprop="description">Counts all the hostnames for an IP adress</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/black-brain/graBing" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">gwtenum</td>
+                                <td class="tbl-version vcat">7.f27a5aa</td>
+                                <td class="tbl-description dcat" itemprop="description">Enumeration of GWT-RCP method calls.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.gdssecurity.com/l/t/d.php?k=GwtEnum" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">h8mail</td>
+                                <td class="tbl-version vcat">330.0a371eb</td>
+                                <td class="tbl-description dcat" itemprop="description">Email OSINT and password breach hunting.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/khast3x/h8mail" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">hakrevdns</td>
+                                <td class="tbl-version vcat">37.9fa2d59</td>
+                                <td class="tbl-description dcat" itemprop="description">Small, fast tool for performing reverse DNS lookups en masse.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/hakluke/hakrevdns" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">halcyon</td>
+                                <td class="tbl-version vcat">0.1</td>
+                                <td class="tbl-description dcat" itemprop="description">A repository crawler that runs checksums for static files found within a given git repository.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.blackhatlibrary.net/Halcyon" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">hasere</td>
+                                <td class="tbl-version vcat">1.0</td>
+                                <td class="tbl-description dcat" itemprop="description">Discover the vhosts using google and bing.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/galkan/hasere" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">hatcloud</td>
+                                <td class="tbl-version vcat">33.3012ad6</td>
+                                <td class="tbl-description dcat" itemprop="description">Bypass CloudFlare with Ruby.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/HatBashBR/HatCloud" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">hoper</td>
+                                <td class="tbl-version vcat">12.3951159</td>
+                                <td class="tbl-description dcat" itemprop="description">Trace URL's jumps across the rel links to obtain the last URL.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/gabamnml/hoper" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">hosthunter</td>
+                                <td class="tbl-version vcat">110.f97ba88</td>
+                                <td class="tbl-description dcat" itemprop="description">A recon tool for discovering hostnames using OSINT techniques.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/SpiderLabs/HostHunter" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">howmanypeoplearearound</td>
+                                <td class="tbl-version vcat">123.b05e06a</td>
+                                <td class="tbl-description dcat" itemprop="description">Count the number of people around you by monitoring wifi signals.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/schollz/howmanypeoplearearound" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">id-entify</td>
+                                <td class="tbl-version vcat">34.dd064a5</td>
+                                <td class="tbl-description dcat" itemprop="description">Search for information related to a domain: Emails - IP addresses - Domains - Information on WEB technology - Type of Firewall - NS and MX records.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/BillyV4/ID-entify" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">idswakeup</td>
+                                <td class="tbl-version vcat">1.0</td>
+                                <td class="tbl-description dcat" itemprop="description">A collection of tools that allows to test network intrusion detection systems.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.hsc.fr/ressources/outils/idswakeup/index.html.en" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">infoga</td>
+                                <td class="tbl-version vcat">26.963663b</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool for gathering e-mail accounts information from different public sources (search engines, pgp key servers).</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/m4ll0k/infoga" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">inquisitor</td>
+                                <td class="tbl-version vcat">28.12a9ec1</td>
+                                <td class="tbl-description dcat" itemprop="description">OSINT Gathering Tool for Companies and Organizations.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/penafieljlm/inquisitor" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">intelplot</td>
+                                <td class="tbl-version vcat">12.4dd9fc0</td>
+                                <td class="tbl-description dcat" itemprop="description">OSINT Tool to Mark Points on Offline Map.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/itsmehacker/IntelPlot" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">intrace</td>
+                                <td class="tbl-version vcat">1.5</td>
+                                <td class="tbl-description dcat" itemprop="description">Traceroute-like application piggybacking on existing TCP connections</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://intrace.googlecode.com" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ip-tracer</td>
+                                <td class="tbl-version vcat">88.28c5c49</td>
+                                <td class="tbl-description dcat" itemprop="description">Track and retrieve any ip address information.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/Rajkumrdusad/IP-Tracer" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ip2clue</td>
+                                <td class="tbl-version vcat">0.0.95</td>
+                                <td class="tbl-description dcat" itemprop="description">A small memory/CPU footprint daemon to lookup country (and other info) based on IP (v4 and v6).</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://kernel.embedromix.ro/us/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">iptodomain</td>
+                                <td class="tbl-version vcat">18.f1afcd7</td>
+                                <td class="tbl-description dcat" itemprop="description">This tool extract domains from IP address based in the information saved in virustotal.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/Hackplayers/iptodomain" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ipv666</td>
+                                <td class="tbl-version vcat">182.ad45ae8</td>
+                                <td class="tbl-description dcat" itemprop="description">Golang IPv6 address enumeration.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/lavalamp-/ipv666" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ircsnapshot</td>
+                                <td class="tbl-version vcat">94.cb02a85</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool to gather information from IRC servers.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/bwall/ircsnapshot" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">isr-form</td>
+                                <td class="tbl-version vcat">1.0</td>
+                                <td class="tbl-description dcat" itemprop="description">Simple html parsing tool that extracts all form related information and generates reports of the data. Allows for quick analyzing of data.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.infobyte.com.ar/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ivre</td>
+                                <td class="tbl-version vcat">0.9.16.dev168</td>
+                                <td class="tbl-description dcat" itemprop="description">Network recon framework based on Nmap, Masscan, Zeek (Bro), Argus, Netflow,...</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://ivre.rocks/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ivre-docs</td>
+                                <td class="tbl-version vcat">0.9.16.dev168</td>
+                                <td class="tbl-description dcat" itemprop="description">Network recon framework based on Nmap, Masscan, Zeek (Bro), Argus, Netflow,... (documentation)</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://ivre.rocks/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ivre-web</td>
+                                <td class="tbl-version vcat">0.9.16.dev168</td>
+                                <td class="tbl-description dcat" itemprop="description">Network recon framework based on Nmap, Masscan, Zeek (Bro), Argus, Netflow,... (web application)</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://ivre.rocks/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">jackdaw</td>
+                                <td class="tbl-version vcat">340.3876298</td>
+                                <td class="tbl-description dcat" itemprop="description">Collect all information in your domain, show you graphs on how domain objects interact with each-other and how to exploit these interactions</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/skelsec/jackdaw" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">jsearch</td>
+                                <td class="tbl-version vcat">34.15a5285</td>
+                                <td class="tbl-description dcat" itemprop="description">Simple script that grep infos from javascript files.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/incogbyte/jsearch" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">kacak</td>
+                                <td class="tbl-version vcat">1.0</td>
+                                <td class="tbl-description dcat" itemprop="description">Tools for penetration testers that can enumerate which users logged on windows system.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/galkan/kacak" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">kamerka</td>
+                                <td class="tbl-version vcat">40.be17620</td>
+                                <td class="tbl-description dcat" itemprop="description">Build interactive map of cameras from Shodan.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/woj-ciech/kamerka" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">keye</td>
+                                <td class="tbl-version vcat">29.d44a578</td>
+                                <td class="tbl-description dcat" itemprop="description">Recon tool detecting changes of websites based on content-length differences.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/clirimemini/Keye" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">lanmap2</td>
+                                <td class="tbl-version vcat">127.1197999</td>
+                                <td class="tbl-description dcat" itemprop="description">Passive network mapping tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://github.com/rflynn/lanmap2" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">lbd</td>
+                                <td class="tbl-version vcat">20130719</td>
+                                <td class="tbl-description dcat" itemprop="description">Load Balancing detector,</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://ge.mine.nu/code/lbd" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ldapenum</td>
+                                <td class="tbl-version vcat">0.1</td>
+                                <td class="tbl-description dcat" itemprop="description">Enumerate domain controllers using LDAP.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://gobag.googlecode.com/svn-history/r2/trunk/ldap/ldapenum/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ldeep</td>
+                                <td class="tbl-version vcat">111.b413c5d</td>
+                                <td class="tbl-description dcat" itemprop="description">In-depth ldap enumeration utility.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/franc-pentest/ldeep" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">legion</td>
+                                <td class="tbl-version vcat">55.df23a34</td>
+                                <td class="tbl-description dcat" itemprop="description">Automatic Enumeration Tool based in Open Source tools.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/carlospolop/legion" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">lft</td>
+                                <td class="tbl-version vcat">3.91</td>
+                                <td class="tbl-description dcat" itemprop="description">A layer four traceroute implementing numerous other features.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://pwhois.org/lft/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">lhf</td>
+                                <td class="tbl-version vcat">40.51568ee</td>
+                                <td class="tbl-description dcat" itemprop="description">A modular recon tool for pentesting.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/blindfuzzy/LHF" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">linux-exploit-suggester</td>
+                                <td class="tbl-version vcat">32.9db2f5a</td>
+                                <td class="tbl-description dcat" itemprop="description">A Perl script that tries to suggest exploits based OS version number.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/PenturaLabs/Linux_Exploit_Suggester" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">linux-exploit-suggester.sh</td>
+                                <td class="tbl-version vcat">159.a1b33c8</td>
+                                <td class="tbl-description dcat" itemprop="description">Linux privilege escalation auditing tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/mzet-/linux-exploit-suggester" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">littlebrother</td>
+                                <td class="tbl-version vcat">112.338cf82</td>
+                                <td class="tbl-description dcat" itemprop="description">OSINT tool to get informations on French, Belgian and Swizerland people.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/lulz3xploit/LittleBrother" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">loot</td>
+                                <td class="tbl-version vcat">51.656fb85</td>
+                                <td class="tbl-description dcat" itemprop="description">Sensitive information extraction tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/GuerrillaWarfare/Loot" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">machinae</td>
+                                <td class="tbl-version vcat">192.d1c78b8</td>
+                                <td class="tbl-description dcat" itemprop="description">A tool for collecting intelligence from public sites/feeds about various security-related pieces of data.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/HurricaneLabs/machinae" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">mail-crawl</td>
+                                <td class="tbl-version vcat">0.1</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool to harvest emails from website.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://raw.githubusercontent.com/galkan/tools/master/mail-crawl/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">massbleed</td>
+                                <td class="tbl-version vcat">20.44b7e85</td>
+                                <td class="tbl-description dcat" itemprop="description">SSL Vulnerability Scanner.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/1N3/Sn1per" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">mdns-recon</td>
+                                <td class="tbl-version vcat">10.81ecf94</td>
+                                <td class="tbl-description dcat" itemprop="description">An mDNS recon tool written in Python.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/chadillac/mdns_recon" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">metabigor</td>
+                                <td class="tbl-version vcat">43.f669f18</td>
+                                <td class="tbl-description dcat" itemprop="description">Intelligence Tool but without API key.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/j3ssie/metabigor" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">metagoofil</td>
+                                <td class="tbl-version vcat">12.823b114</td>
+                                <td class="tbl-description dcat" itemprop="description">An information gathering tool designed for extracting metadata of public documents.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.edge-security.com/metagoofil.php" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">mildew</td>
+                                <td class="tbl-version vcat">9.9130e5a</td>
+                                <td class="tbl-description dcat" itemprop="description">Dotmil subdomain discovery tool that scrapes domains from official DoD website directories and certificate transparency logs.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/daehee/mildew" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">missidentify</td>
+                                <td class="tbl-version vcat">1.0</td>
+                                <td class="tbl-description dcat" itemprop="description">A program to find Win32 applications.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://missidentify.sourceforge.net/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">monocle</td>
+                                <td class="tbl-version vcat">1.0</td>
+                                <td class="tbl-description dcat" itemprop="description">A local network host discovery tool. In passive mode, it will listen for ARP request and reply packets. In active mode, it will send ARP requests to the specific IP range. The results are a list of IP and MAC addresses present on the local network.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://packetstormsecurity.com/files/99823/Monocle-Host-Discovery-Tool.0.html" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">nasnum</td>
+                                <td class="tbl-version vcat">5.df5df19</td>
+                                <td class="tbl-description dcat" itemprop="description">Script to enumerate network attached storages.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/tcstool/nasnum.git" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">necromant</td>
+                                <td class="tbl-version vcat">3.acbc448</td>
+                                <td class="tbl-description dcat" itemprop="description">Python Script that search unused Virtual Hosts in Web Servers.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/PentesterES/Necromant" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">neglected</td>
+                                <td class="tbl-version vcat">8.68d02b3</td>
+                                <td class="tbl-description dcat" itemprop="description">Facebook CDN Photo Resolver.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/GuerrillaWarfare/neglected" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">netdiscover</td>
+                                <td class="tbl-version vcat">162.e3c3331</td>
+                                <td class="tbl-description dcat" itemprop="description">An active/passive address reconnaissance tool, mainly developed for those wireless networks without dhcp server, when you are wardriving. It can be also used on hub/switched networks.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://nixgeneration.com/~jaime/netdiscover/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">netkit-bsd-finger</td>
+                                <td class="tbl-version vcat">0.17</td>
+                                <td class="tbl-description dcat" itemprop="description">BSD-finger ported to Linux.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://ftp.linux.org.uk/pub/linux/Networking/netkit" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">netkit-rusers</td>
+                                <td class="tbl-version vcat">0.17</td>
+                                <td class="tbl-description dcat" itemprop="description">Logged in users; Displays who is logged in to machines on local network.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://packages.debian.org/source/sid/net/netkit-rusers" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">netkit-rwho</td>
+                                <td class="tbl-version vcat">0.17</td>
+                                <td class="tbl-description dcat" itemprop="description">Remote who client and server (with Debian patches).</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://packages.qa.debian.org/n/netkit-rwho.html" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">netmask</td>
+                                <td class="tbl-version vcat">2.4.4</td>
+                                <td class="tbl-description dcat" itemprop="description">Helps determine network masks</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://packages.qa.debian.org/n/netmask.html" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">nohidy</td>
+                                <td class="tbl-version vcat">67.22c1283</td>
+                                <td class="tbl-description dcat" itemprop="description">The system admins best friend, multi platform auditing tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/flipchan/Nohidy" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">nsec3walker</td>
+                                <td class="tbl-version vcat">20101223</td>
+                                <td class="tbl-description dcat" itemprop="description">Enumerates domain names using DNSSEC</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://dnscurve.org/nsec3walker.html" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ntp-ip-enum</td>
+                                <td class="tbl-version vcat">0.1</td>
+                                <td class="tbl-description dcat" itemprop="description">Script to pull addresses from a NTP server using the monlist command. Can also output Maltego resultset.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.securepla.net/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">nullinux</td>
+                                <td class="tbl-version vcat">117.04ca542</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool that can be used to enumerate OS information, domain information, shares, directories, and users through SMB null sessions.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/m8r0wn/nullinux" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">omnibus</td>
+                                <td class="tbl-version vcat">129.88dbf5d</td>
+                                <td class="tbl-description dcat" itemprop="description">OSINT tool for intelligence collection, research and artifact management.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/InQuest/omnibus" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">onioff</td>
+                                <td class="tbl-version vcat">84.34dc309</td>
+                                <td class="tbl-description dcat" itemprop="description">An onion url inspector for inspecting deep web links.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/k4m4/onioff" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">osint-spy</td>
+                                <td class="tbl-version vcat">25.03dcf48</td>
+                                <td class="tbl-description dcat" itemprop="description">Performs OSINT scan on email/domain/ip_address/organization.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/SharadKumar97/OSINT-SPY" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">osinterator</td>
+                                <td class="tbl-version vcat">3.8447f58</td>
+                                <td class="tbl-description dcat" itemprop="description">Open Source Toolkit for Open Source Intelligence Gathering.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/guitarmanj/OSINTerator" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">osrframework</td>
+                                <td class="tbl-version vcat">830.82f9e46</td>
+                                <td class="tbl-description dcat" itemprop="description">A project focused on providing API and tools to perform more accurate online researches.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/i3visio/osrframework" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">parsero</td>
+                                <td class="tbl-version vcat">81.e5b585a</td>
+                                <td class="tbl-description dcat" itemprop="description">A robots.txt audit tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/behindthefirewalls/Parsero" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">pdfgrab</td>
+                                <td class="tbl-version vcat">15.1327508</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool for searching pdfs withthin google and extracting pdf metadata.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/c0decave/pdfgrab" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">pmapper</td>
+                                <td class="tbl-version vcat">70.f047d19</td>
+                                <td class="tbl-description dcat" itemprop="description">A tool for quickly evaluating IAM permissions in AWS.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/nccgroup/PMapper" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">postenum</td>
+                                <td class="tbl-version vcat">115.542bde9</td>
+                                <td class="tbl-description dcat" itemprop="description">Clean, nice and easy tool for basic/advanced privilege escalation techniques.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/mbahadou/postenum" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">punter</td>
+                                <td class="tbl-version vcat">45.97b7bed</td>
+                                <td class="tbl-description dcat" itemprop="description">Hunt domain names using DNSDumpster, WHOIS, Reverse WHOIS, Shodan, Crimeflare.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/nethunteros/punter" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">pwned</td>
+                                <td class="tbl-version vcat">1308.372624e</td>
+                                <td class="tbl-description dcat" itemprop="description">A command-line tool for querying the 'Have I been pwned?' service.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/wKovacs64/pwned" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">pwned-search</td>
+                                <td class="tbl-version vcat">40.04c1439</td>
+                                <td class="tbl-description dcat" itemprop="description">Pwned Password API lookup.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/mikepound/pwned-search" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">pwnedornot</td>
+                                <td class="tbl-version vcat">137.4707b81</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool to find passwords for compromised email addresses.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/thewhiteh4t/pwnedOrNot" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">pymeta</td>
+                                <td class="tbl-version vcat">13.fa74e64</td>
+                                <td class="tbl-description dcat" itemprop="description">Auto Scanning to SSL Vulnerability.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/m8r0wn/pymeta" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">python-api-dnsdumpster</td>
+                                <td class="tbl-version vcat">69.eddcc18</td>
+                                <td class="tbl-description dcat" itemprop="description">Unofficial Python API for http://dnsdumpster.com/.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/PaulSec/API-dnsdumpster.com" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">python-ivre</td>
+                                <td class="tbl-version vcat">0.9.16.dev168</td>
+                                <td class="tbl-description dcat" itemprop="description">Network recon framework based on Nmap, Masscan, Zeek (Bro), Argus, Netflow,... (library)</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://ivre.rocks/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">python-shodan</td>
+                                <td class="tbl-version vcat">1.25.0</td>
+                                <td class="tbl-description dcat" itemprop="description">Python library and command-line utility for Shodan (https://developer.shodan.io).</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://pypi.org/project/shodan/#files" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">python2-api-dnsdumpster</td>
+                                <td class="tbl-version vcat">69.eddcc18</td>
+                                <td class="tbl-description dcat" itemprop="description">Unofficial Python API for http://dnsdumpster.com/.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/PaulSec/API-dnsdumpster.com" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">python2-ivre</td>
+                                <td class="tbl-version vcat">0.9.16.dev26</td>
+                                <td class="tbl-description dcat" itemprop="description">Network recon framework based on Nmap, Masscan, Zeek (Bro), Argus, Netflow,... (library)</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://ivre.rocks/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">python2-shodan</td>
+                                <td class="tbl-version vcat">1.25.0</td>
+                                <td class="tbl-description dcat" itemprop="description">Python library and command-line utility for Shodan (https://developer.shodan.io).</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://pypi.org/project/shodan/#files" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">quickrecon</td>
+                                <td class="tbl-version vcat">0.3.2</td>
+                                <td class="tbl-description dcat" itemprop="description">A python script for simple information gathering. It attempts to find subdomain names, perform zone transfers and gathers emails from Google and Bing.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://packetstormsecurity.com/files/104314/QuickRecon.3.2.html" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">raccoon</td>
+                                <td class="tbl-version vcat">184.a77dae5</td>
+                                <td class="tbl-description dcat" itemprop="description">A high performance offensive security tool for reconnaissance and vulnerability scanning.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/evyatarmeged/Raccoon" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">recon-ng</td>
+                                <td class="tbl-version vcat">1017.093a9e6</td>
+                                <td class="tbl-description dcat" itemprop="description">A full-featured Web Reconnaissance framework written in Python.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/lanmaster53/recon-ng" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">reconnoitre</td>
+                                <td class="tbl-version vcat">441.f62afba</td>
+                                <td class="tbl-description dcat" itemprop="description">A security tool for multithreaded information gathering and service enumeration.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/codingo/Reconnoitre" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">reconscan</td>
+                                <td class="tbl-version vcat">37.d321842</td>
+                                <td class="tbl-description dcat" itemprop="description">Network reconnaissance and vulnerability assessment tools.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/RoliSoft/ReconScan" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">recsech</td>
+                                <td class="tbl-version vcat">123.1fc298a</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool for doing Footprinting and Reconnaissance on the target web.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/radenvodka/Recsech" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">red-hawk</td>
+                                <td class="tbl-version vcat">36.fa54e23</td>
+                                <td class="tbl-description dcat" itemprop="description">All in one tool for Information Gathering, Vulnerability Scanning and Crawling.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/Tuhinshubhra/RED_HAWK" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">reverseip</td>
+                                <td class="tbl-version vcat">13.42cc9c3</td>
+                                <td class="tbl-description dcat" itemprop="description">Ruby based reverse IP-lookup tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/lolwaleet/ReverseIP" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">revipd</td>
+                                <td class="tbl-version vcat">5.2aaacfb</td>
+                                <td class="tbl-description dcat" itemprop="description">A simple reverse IP domain scanner.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/PypeRanger/revipd" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ridrelay</td>
+                                <td class="tbl-version vcat">34.f2fa99c</td>
+                                <td class="tbl-description dcat" itemprop="description">Enumerate usernames on a domain where you have no creds by using SMB Relay with low priv.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/skorov/ridrelay" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ripdc</td>
+                                <td class="tbl-version vcat">0.3</td>
+                                <td class="tbl-description dcat" itemprop="description">A script which maps domains related to an given ip address or domainname.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://nullsecurity.net/tools/scanner" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">rita</td>
+                                <td class="tbl-version vcat">764.5ade17b</td>
+                                <td class="tbl-description dcat" itemprop="description">Real Intelligence Threat Analytics.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/activecm/rita" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">scavenger</td>
+                                <td class="tbl-version vcat">100.e81f28d</td>
+                                <td class="tbl-description dcat" itemprop="description">Crawler (Bot) searching for credential leaks on different paste sites.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/rndinfosecguy/Scavenger" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">sctpscan</td>
+                                <td class="tbl-version vcat">34.4d44706</td>
+                                <td class="tbl-description dcat" itemprop="description">A network scanner for discovery and security.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.p1sec.com/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">server-status-pwn</td>
+                                <td class="tbl-version vcat">7.0c02af0</td>
+                                <td class="tbl-description dcat" itemprop="description">A script that monitors and extracts requested URLs and clients connected to the service by exploiting publicly accessible Apache server-status instances.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/mazen160/server-status_PWN" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">shard</td>
+                                <td class="tbl-version vcat">1.5</td>
+                                <td class="tbl-description dcat" itemprop="description">A command line tool to detect shared passwords.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/philwantsfish/shard" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">shhgit</td>
+                                <td class="tbl-version vcat">65.65351a7</td>
+                                <td class="tbl-description dcat" itemprop="description">Find committed secrets and sensitive files across GitHub, Gists, GitLab and BitBucket or your local repositories in real time.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/eth0izzle/shhgit" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">shodanhat</td>
+                                <td class="tbl-version vcat">13.e5e7e68</td>
+                                <td class="tbl-description dcat" itemprop="description">Search for hosts info with shodan.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/HatBashBR/ShodanHat" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">simplyemail</td>
+                                <td class="tbl-version vcat">1.4.10.r7.6a42d37</td>
+                                <td class="tbl-description dcat" itemprop="description">Email recon made fast and easy, with a framework to build on CyberSyndicates</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/killswitch-GUI/SimplyEmail" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">sipi</td>
+                                <td class="tbl-version vcat">13.58f0dcc</td>
+                                <td class="tbl-description dcat" itemprop="description">Simple IP Information Tools for Reputation Data Analysis.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/ST2Labs/SIPI" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">smbcrunch</td>
+                                <td class="tbl-version vcat">12.313400e</td>
+                                <td class="tbl-description dcat" itemprop="description">3 tools that work together to simplify reconnaissance of Windows File Shares.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/Raikia/SMBCrunch" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">smtp-user-enum</td>
+                                <td class="tbl-version vcat">1.2</td>
+                                <td class="tbl-description dcat" itemprop="description">Username guessing tool primarily for use against the default Solaris SMTP service. Can use either EXPN, VRFY or RCPT TO.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://pentestmonkey.net/tools/user-enumeration/smtp-user-enum" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">socialscan</td>
+                                <td class="tbl-version vcat">106.95a413e</td>
+                                <td class="tbl-description dcat" itemprop="description">Check email address and username availability on online platforms.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/iojw/socialscan" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">spfmap</td>
+                                <td class="tbl-version vcat">8.a42d15a</td>
+                                <td class="tbl-description dcat" itemprop="description">A program to map out SPF and DKIM records for a large number of domains.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/BishopFox/spfmap" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">spiderfoot</td>
+                                <td class="tbl-version vcat">3.3</td>
+                                <td class="tbl-description dcat" itemprop="description">The Open Source Footprinting Tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/smicallef/spiderfoot" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">spoofcheck</td>
+                                <td class="tbl-version vcat">16.8cce591</td>
+                                <td class="tbl-description dcat" itemprop="description">Simple script that checks a domain for email protections.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/bishopfox/spoofcheck" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">spyse</td>
+                                <td class="tbl-version vcat">47.cd11ba9</td>
+                                <td class="tbl-description dcat" itemprop="description">Python API wrapper and command-line client for the tools hosted on spyse.com.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/zeropwn/spyse.py" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ssl-hostname-resolver</td>
+                                <td class="tbl-version vcat">1</td>
+                                <td class="tbl-description dcat" itemprop="description">CN (Common Name) grabber on X.509 Certificates over HTTPS.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://packetstormsecurity.com/files/120634/Common-Name-Grabber-Script.html" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">stardox</td>
+                                <td class="tbl-version vcat">41.95b0a97</td>
+                                <td class="tbl-description dcat" itemprop="description">Github stargazers information gathering tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/0xPrateek/Stardox" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">subdomainer</td>
+                                <td class="tbl-version vcat">1.2</td>
+                                <td class="tbl-description dcat" itemprop="description">A tool designed for obtaining subdomain names from public sources.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.edge-security.com/subdomainer.php" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">subfinder</td>
+                                <td class="tbl-version vcat">900.5199099</td>
+                                <td class="tbl-description dcat" itemprop="description">Modular subdomain discovery tool that can discover massive amounts of valid subdomains for any target.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/projectdiscovery/subfinder" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">sublert</td>
+                                <td class="tbl-version vcat">67.56d2a12</td>
+                                <td class="tbl-description dcat" itemprop="description">A security and reconnaissance tool which leverages certificate transparency to automatically monitor new subdomains deployed by specific organizations and issued TLS/SSL certificate.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/yassineaboukir/sublert" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">sublist3r</td>
+                                <td class="tbl-version vcat">138.729d649</td>
+                                <td class="tbl-description dcat" itemprop="description">A Fast subdomains enumeration tool for penetration testers.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/aboul3la/Sublist3r" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">subscraper</td>
+                                <td class="tbl-version vcat">38.5602e41</td>
+                                <td class="tbl-description dcat" itemprop="description">Tool that performs subdomain enumeration through various techniques.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/m8r0wn/subscraper" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">svn-extractor</td>
+                                <td class="tbl-version vcat">42.c27831c</td>
+                                <td class="tbl-description dcat" itemprop="description">A simple script to extract all web resources by means of .SVN folder exposed over network.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/anantshri/svn-extractor" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">swamp</td>
+                                <td class="tbl-version vcat">59.3c8be65</td>
+                                <td class="tbl-description dcat" itemprop="description">An OSINT tool for discovering associated sites through Google Analytics Tracking IDs.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/jakecreps/swamp" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">syborg</td>
+                                <td class="tbl-version vcat">36.5cd010b</td>
+                                <td class="tbl-description dcat" itemprop="description">Recursive DNS Subdomain Enumerator with dead-end avoidance system.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/MilindPurswani/Syborg" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">sysdig</td>
+                                <td class="tbl-version vcat">0.27.1</td>
+                                <td class="tbl-description dcat" itemprop="description">Open source system-level exploration and troubleshooting tool</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://www.sysdig.com/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">thedorkbox</td>
+                                <td class="tbl-version vcat">7.43852d3</td>
+                                <td class="tbl-description dcat" itemprop="description">Comprehensive collection of Google Dorks & OSINT techniques to find Confidential Data.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/cybersafeblr/thedorkbox" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">theharvester</td>
+                                <td class="tbl-version vcat">2311.ae63bd7</td>
+                                <td class="tbl-description dcat" itemprop="description">Python tool for gathering e-mail accounts and subdomain names from different public sources (search engines, pgp key servers).</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.edge-security.com/theHarvester.php" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">tilt</td>
+                                <td class="tbl-version vcat">90.2bc2ef2</td>
+                                <td class="tbl-description dcat" itemprop="description">An easy and simple tool implemented in Python for ip reconnaissance, with reverse ip lookup.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/AeonDave/tilt" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">tinfoleak</td>
+                                <td class="tbl-version vcat">3.6469eb3</td>
+                                <td class="tbl-description dcat" itemprop="description">Get detailed information about a Twitter user activity.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/technoskald/tinfoleak/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">tinfoleak2</td>
+                                <td class="tbl-version vcat">41.c45c33e</td>
+                                <td class="tbl-description dcat" itemprop="description">The most complete open-source tool for Twitter intelligence analysis.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.vicenteaguileradiaz.com/tools/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">traceroute</td>
+                                <td class="tbl-version vcat">2.1.0</td>
+                                <td class="tbl-description dcat" itemprop="description">Tracks the route taken by packets over an IP network</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://traceroute.sourceforge.net/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">treasure</td>
+                                <td class="tbl-version vcat">2.b3249be</td>
+                                <td class="tbl-description dcat" itemprop="description">Hunt for sensitive information through githubs code search.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/GuerrillaWarfare/Treasure" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">trusttrees</td>
+                                <td class="tbl-version vcat">102.a9b7399</td>
+                                <td class="tbl-description dcat" itemprop="description">A Tool for DNS Delegation Trust Graphing.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/mandatoryprogrammer/TrustTrees" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">twofi</td>
+                                <td class="tbl-version vcat">2.0</td>
+                                <td class="tbl-description dcat" itemprop="description">Twitter Words of Interest.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.digininja.org/projects/twofi.php" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">ubiquiti-probing</td>
+                                <td class="tbl-version vcat">5.c28f4c1</td>
+                                <td class="tbl-description dcat" itemprop="description">A Ubiquiti device discovery tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/headlesszeke/ubiquiti-probing" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">udork</td>
+                                <td class="tbl-version vcat">94.5c31877</td>
+                                <td class="tbl-description dcat" itemprop="description">Python script that uses advanced Google search techniques to obtain sensitive information in files or directories, find IoT devices, detect versions of web applications.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/m3n0sd0n4ld/uDork" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">uhoh365</td>
+                                <td class="tbl-version vcat">26.110277a</td>
+                                <td class="tbl-description dcat" itemprop="description">Script to enumerate Office 365 users without performing login attempts</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/Raikia/UhOh365" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">userrecon</td>
+                                <td class="tbl-version vcat">10.3b56891</td>
+                                <td class="tbl-description dcat" itemprop="description">Find usernames across over 75 social networks.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/thelinuxchoice/userrecon" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">vbrute</td>
+                                <td class="tbl-version vcat">1.11dda8b</td>
+                                <td class="tbl-description dcat" itemprop="description">Virtual hosts brute forcer.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/nccgroup/vbrute" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">vpnpivot</td>
+                                <td class="tbl-version vcat">22.37bbde0</td>
+                                <td class="tbl-description dcat" itemprop="description">Explore the network using this tool.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/0x36/VPNPivot" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">waldo</td>
+                                <td class="tbl-version vcat">29.ee4f960</td>
+                                <td class="tbl-description dcat" itemprop="description">A lightweight and multithreaded directory and subdomain bruteforcer implemented in Python.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/red-team-labs/waldo" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">waybackurls</td>
+                                <td class="tbl-version vcat">9.58bbafe</td>
+                                <td class="tbl-description dcat" itemprop="description">Fetch all the URLs that the Wayback Machine knows about for a domain.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/tomnomnom/waybackurls" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">websearch</td>
+                                <td class="tbl-version vcat">3.09935a5</td>
+                                <td class="tbl-description dcat" itemprop="description">Search vhost names given a host range. Powered by Bing..</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/PentesterES/WebSearch" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">weebdns</td>
+                                <td class="tbl-version vcat">14.c01c04f</td>
+                                <td class="tbl-description dcat" itemprop="description">DNS Enumeration with Asynchronicity.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/WeebSec/weebdns" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">whatweb</td>
+                                <td class="tbl-version vcat">4908.eeca4cd3</td>
+                                <td class="tbl-description dcat" itemprop="description">Next generation web scanner that identifies what websites are running.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="http://www.morningstarsecurity.com/research/whatweb" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">windapsearch</td>
+                                <td class="tbl-version vcat">28.7724ec4</td>
+                                <td class="tbl-description dcat" itemprop="description">Script to enumerate users, groups and computers from a Windows domain through LDAP queries.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/ropnop/windapsearch" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">windows-exploit-suggester</td>
+                                <td class="tbl-version vcat">41.776bd91</td>
+                                <td class="tbl-description dcat" itemprop="description">This tool compares a targets patch levels against the Microsoft vulnerability database in order to detect potential missing patches on the target.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/GDSSecurity/Windows-Exploit-Suggester" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">xray</td>
+                                <td class="tbl-version vcat">91.ca50a32</td>
+                                <td class="tbl-description dcat" itemprop="description">A tool for recon, mapping and OSINT gathering from public networks.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/evilsocket/xray" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">zeus-scanner</td>
+                                <td class="tbl-version vcat">414.21b8756</td>
+                                <td class="tbl-description dcat" itemprop="description">Advanced dork searching utility.</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/Ekultek/Zeus-Scanner" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class=tbl-name itemprop="name">zgrab</td>
+                                <td class="tbl-version vcat">803.031475e</td>
+                                <td class="tbl-description dcat" itemprop="description">Grab banners (optionally over TLS).</td>
+                                <td class=tbl-homepage itemprop="mainEntityOfPage"><a href="https://github.com/zmap/zgrab" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Footer -->
+      	<footer>
+           <div class="row">
+				<div id=socialfoot class="col-lg-12" itemscope itemtype="https://schema.org/Organization">
+			 	    <link itemprop="url" href="https://blackarch.org">
+			        <a itemprop="sameAs" href="https://github.com/BlackArch" title="Github" target=_blank><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
+			        <a itemprop="sameAs" href="https://twitter.com/blackarchlinux" title="Twitter" target=_blank><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+					<a itemprop="sameAs" href="irc://irc.freenode.net/blackarch" title="Irc" target=_blank><i class="fas fa-comments fa-2x" aria-hidden="true"></i></a>
+					<a itemprop="sameAs" href="https://discord.gg/DtEfRtx" title="Discord" target="_blank"><i class="fab fa-discord fa-2x" aria-hidden="true"></i></a>
+					<a itemprop="sameAs" href="https://blackarch.org/blog.html" title="Blog" target=_blank><i class="fas fa-newspaper fa-2x" aria-hidden="true"></i></a>
+					<a itemprop="sameAs" href="https://blackarch.org/rss.xml" title="Rss" target=_blank><i class="fas fa-rss fa-2x" aria-hidden="true"></i></a>
+					<br><span itemprop="legalName">BlackArch Linux</span> <span>2013-2021</span>
+	            </div>
+            </div>
+	    <!-- End Footer -->
+        </footer>
+        </div>
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/blackarch.js"></script>
+</body>
+</html>
